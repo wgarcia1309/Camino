@@ -88,10 +88,9 @@ static int ca2;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String ca = t1.getText();
         ca2 = Integer.parseInt(ca);
-        //System.out.println(ca2);
-        if (ca2 > 72) {
+        if (ca2<0 ||ca2 > 72) 
             JOptionPane.showMessageDialog(null, "Error, el limite maximo es de 72");
-        } else {
+         else {
             laberinto v1 = new laberinto();
             v1.setVisible(true);
             this.setVisible(false);

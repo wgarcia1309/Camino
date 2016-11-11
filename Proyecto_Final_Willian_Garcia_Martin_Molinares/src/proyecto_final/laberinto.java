@@ -4,15 +4,14 @@ import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 
-
 public class laberinto extends JFrame {
- 
+
     static Scanner leer = new Scanner(System.in);
     static Random rnd = new Random();
-    static int[][] m = new int[12][12];
+    static short[][] m = new short[12][12];
     static JPanel[][] paneles = new JPanel[12][12];
     public int numero;
-    
+
     public laberinto() {
         initComponents();
         setSize(600, 622);
@@ -34,8 +33,10 @@ public class laberinto extends JFrame {
                     panel.setLocation(y, x);
                     this.add(panel);
                 }
+                System.out.print(m[j][i] + " ");
                 x += 50;
             }
+            System.out.println("");
             x = 0;
             y += 50;
         }
@@ -53,16 +54,15 @@ public class laberinto extends JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 93, Short.MAX_VALUE)
+            .addGap(0, 76, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 71, Short.MAX_VALUE)
         );
 
-        setBounds(0, 0, 93, 93);
+        setBounds(0, 0, 92, 93);
     }// </editor-fold>//GEN-END:initComponents
-
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -96,6 +96,7 @@ public class laberinto extends JFrame {
         });
     }
 
+    //Volver static luego de las pruebas
     static void generar(int num) {
         int h = 0;
         while (h < num) {
@@ -109,7 +110,7 @@ public class laberinto extends JFrame {
             h++;
         }
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
