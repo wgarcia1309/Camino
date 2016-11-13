@@ -5,7 +5,7 @@ import java.util.*;
 import javax.swing.*;
 
 public class laberinto extends JFrame {
-
+    
     static Scanner leer = new Scanner(System.in);
     static Random rnd = new Random();
     static short[][] m = new short[12][12];
@@ -54,14 +54,14 @@ public class laberinto extends JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 76, Short.MAX_VALUE)
+            .addGap(0, 563, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 71, Short.MAX_VALUE)
+            .addGap(0, 301, Short.MAX_VALUE)
         );
 
-        setBounds(0, 0, 92, 93);
+        setBounds(0, 0, 579, 340);
     }// </editor-fold>//GEN-END:initComponents
 
     public static void main(String args[]) {
@@ -95,9 +95,7 @@ public class laberinto extends JFrame {
             }
         });
     }
-
-    //Volver static luego de las pruebas
-    static void generar(int num) {
+ public static void generar(int num) {
         int h = 0;
         while (h < num) {
             int x = (int) (rnd.nextDouble() * 12.0);
@@ -110,7 +108,6 @@ public class laberinto extends JFrame {
             h++;
         }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
