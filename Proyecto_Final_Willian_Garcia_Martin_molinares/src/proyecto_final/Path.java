@@ -1,7 +1,6 @@
 package proyecto_final;
 
 import static proyecto_final.laberinto.m;
-import static proyecto_final.laberinto.generar;
 public class Path {
 
     public static short[][] CA = new short[144][2];
@@ -14,13 +13,16 @@ public class Path {
                 m[i][j] = 0;
             }
         }
-        m[1][1] = 2;
+//        m[2][0]=2;
+//        m[1][1]=2;
+//        m[0][2]=2;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 System.out.print(m[i][j] + " ");
             }
             System.out.println("");
         }
+        System.out.println("");
         rc((short) 0, (short) 0, (short) 2, (short) 1, CA, (short) 0, ' ');
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -59,7 +61,6 @@ public class Path {
             m[xi][ji] = 9;
             CA[ta][0] = xi;
             CA[ta][1] = ji;
-            System.out.println(" "+check);
             //limite inicial+1[v] tamaño final[v]
             if (xi > 0 & xi < 3 && check != 'n') {//puedo ir al norte
                 if (m[xi - (short) 1][ji] != 2 && hormigas(CA, ta, (short) (xi - 1), ji) == false) {//acciones norte
@@ -87,6 +88,7 @@ public class Path {
             }
         }
     }
+    //Se puede hacer recursivamente
     static boolean hormigas(short recorrido[][], short pasos, short pi, short pf) {
         for (int i = 0; i < pasos; i++) {
             if (recorrido[i][0] == pi && recorrido[i][1] == pf) {
