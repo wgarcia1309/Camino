@@ -1,5 +1,5 @@
 # Laberinto
-##PROYECTO RECURSIVIDAD
+## PROYECTO RECURSIVIDAD
 ENUNCIADO:
 Generar un tablero 12 x 12 con casillas libres y bloqueadas,
 partiendo de una casilla dada (marcada con *X*), encuentre la casilla dada que
